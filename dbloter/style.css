@@ -46,6 +46,47 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 	display:none;
 }
 
+.denim-layout__footer--cc-licenese{
+	height:49px;
+    margin: 10px 0px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: rgba(0,0,0,0.05);
+}
+
+.creativecommons-banner--wrapper{
+	position:absolute;
+	left:10px;
+	top:10px;
+}
+
+.creativecommons-banner{
+	display:block;
+}
+
+.creativecommons-banner img{
+	border:0px;
+	margin:0px;
+	padding:0px;
+	display:block;
+}
+
+
+.creativecommons-text--wrapper{
+	margin-left:108px;
+	padding:10px 10px 10px 0px;
+}
+
+.creativecommons-text{
+	font-size:12px;
+	line-height: 1;
+    font-weight: normal;
+    vertical-align: text-top;
+}
+
+.creativecommons-text a{
+	color:#0088CC;
+}
 
 
 /* aspect style */
