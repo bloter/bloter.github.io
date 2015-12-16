@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+html{
+	font-size:100%;
+}
+
+html.wf-inactive{
+	font-family: "나눔고딕", "NanumGothic", "Nanum Gothic", "나눔바른고딕", "NanumBarunGothic", "나눔바른고딕OTF", "NanumBarunGothicOTF", "맑은 고딕", "Malgun Gothic", "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", Halvetica, Verdana, Arial, sans-serif;
+}
+
+/* body style 초기화 */
+html body{
+	margin:0px;
+	font-size:inherit;
+}
+
+/* style 초기화 */
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
+	display: block
+}
+
+
+
+/* aspect style */
+.aspect-ratio-box{
+	position: relative;
+	width: 100%;		/* desired width */
+}
+.aspect-ratio-box:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.aspect-ratio-inner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+}
+
+.aspect-ratio-inner a{
+	display:block;
+	height:100%;
+}
+
+.aspect-ratio-inner img{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+/* Other ratios */
+.aspect-ratio-2_1:before{
+	padding-top: 50%;
+}
+.aspect-ratio-1_2:before{
+	padding-top: 200%;
+}
+.aspect-ratio-4_3:before{
+	padding-top: 75%;
+}
+.aspect-ratio-16_9:before{
+	padding-top: 56.25%;
+}
