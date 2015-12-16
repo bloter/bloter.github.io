@@ -20,6 +20,29 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 }
 
 
+/* 공용 스타일 */
+
+.denim-theme a{
+	text-decoration:none;
+	color:#000;
+}
+
+.denim-theme ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+.denim-theme ul li{
+	padding:0px;
+	margin:0px;
+}
+
+.is-hidden{
+	display:none;
+}
+
+
 
 /* aspect style */
 .aspect-ratio-box{
@@ -64,4 +87,1074 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 }
 .aspect-ratio-16_9:before{
 	padding-top: 56.25%;
+}
+
+.denim-layout__division.denim-layout__division--colored-blue{
+	background-color:rgba(1, 115, 195, 0.07);
+}
+
+
+
+/* 기본 모바일 사이즈 - 항상 100% 채우기 */
+.denim-layout__division--size-adjust{
+	position:relative;
+}
+
+.denim-layout__content--size-adjust--mobile{
+	padding:0px 10px;
+}
+
+.denim-layout__page--container{
+	position:relative;
+}
+
+.denim-layout__content--wrapper{
+	padding-top:44px;
+}
+
+@media only screen and (min-width: 768px) { /* 768px 이상 */
+	
+	/* 레이아웃 사이즈 조정 스타일 */
+	.denim-layout__division--size-adjust{ /* 데스크탑에서는 전체 사이즈가 아니게 한다. */
+		max-width:992px;
+		margin:0px auto;
+		padding:0px;
+	}
+
+	.denim-layout__division--size-adjust.denim-layout__division--size-adjust--full-width{ /* 클래스를 이용해 사이즈 초기화 가능 */
+		max-width:100%;
+		width:100%;
+	}
+	
+	.denim-layout__content--size-adjust--mobile{
+		padding:0px;
+	}
+	
+	.denim-layout__content--wrapper{
+		padding-top:0px;
+	}
+}
+
+
+
+/* 모바일 Drawer 스타일 */
+
+/* 플러그인 스타일 Overwrite */
+.mm-panels > .mm-panel.denim-layout__drawer--container {
+    padding: 0px;
+}
+
+.mm-panels > .mm-panel:before, .mm-panels > .mm-panel:after{
+	height:0px !important;
+}
+
+#mm-blocker{
+	background: #000000 !important;
+    opacity: 0.5 !important;
+    z-index: 35000 !important;
+}
+
+
+/* Drawer 추가 스타일 */
+.mm-panels > .mm-panel.denim-layout__drawer--submenu-container{
+	padding:0px 0px 0px 0px
+}
+
+.denim-layout__drawer--submneu-opener{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;   
+}
+
+.denim-layout__drawer--submenu-container .denim-layout__drawer--menu-wrapper{
+	
+}
+
+.mm-listview > li:not(.mm-divider):after{
+	left:0 !important;
+}
+
+.denim-layout__drawer--submenu-container .denim-layout__drawer--menu-wrapper .mm-listview > li:not(.mm-divider):after{
+	left:0;
+}
+
+.denim-layout__drawer--submenu-title{
+	height:44px;
+	line-height:44px;
+	font-size:1.25rem;
+	margin:0px;
+	margin-left:0px;
+	padding-left:0px;
+	
+	background-color:#0088CC;
+	color:#fff;
+	text-align:center;
+	border-bottom:1px solid #0088CC;
+}
+
+.denim-layout__drawer--submenu-closer{
+	position: absolute;
+	display: block;
+    left: 6px;
+    top: 6px;
+    width:24px;
+    padding: 4px;
+    color: #0088CC !important;
+    background-color: #eee;
+    border-radius: 100%;
+}
+
+.denim-layout__drawer--submenu-closer .material-icons,
+.denim-layout__drawer--submenu-closer .fa{
+	display:block;
+}
+
+.denim-layout__drawer--submenu-closer .fa{
+	position:relative;
+	width:24px;
+	height:24px;
+}
+
+.denim-layout__drawer--submenu-closer .fa:before{
+	position: absolute;
+	display:block;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    padding-right: 2px;
+    vertical-align: middle;
+}
+
+
+
+
+/* 테마 Drawer 스타일 적용 */
+
+.denim-layout__drawer--menu-wrapper{
+	
+}
+
+#denim-global__drawer--menu{
+	height:100%;
+	width: 267px;
+	
+	touch-action: pan-y;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    
+    background-color:#fff;
+    z-index: 40000 !important;
+}
+
+.denim-layout__drawer{
+	display:none;
+}
+
+.denim-layout__drawer--header{
+	position:relative;
+	border-bottom:1px solid #0088CC;
+}
+
+.denim-layout__drawer--header-logo{
+	margin:0px;
+	font-size:1.25rem;
+	font-weight:bold;
+	padding-left:15px;
+	
+	height:44px;
+	line-height:44px; 
+}
+
+.denim-layout__drawer--header-handle{
+	position:absolute;
+	top:0;
+	bottom:0;
+	overflow:hidden;
+}
+
+.denim-layout__drawer--header-handle-right{
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	overflow:hidden;
+}
+
+.denim-layout__drawer--profile-wrapper{
+	position:relative;
+	padding:25px 0px;
+}
+
+.denim-layout__drawer--profile-overlay{
+	display:block;
+	
+	background-image: url('assets/images/polygon-pattern-04.jpg');
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: 100% 100%;	
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.overlay:after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.4);
+	opacity: 1;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+	    
+	z-index:9;
+}
+
+.denim-layout__drawer--profile{
+	z-index: 90;
+	position: relative;
+}
+
+.denim-layout__drawer--profile-thumbnail-wrapper{	
+	padding-left:25%;
+	padding-right:25%;
+}
+
+.denim-layout__drawer--profile-thumbnail img{
+	display:block;
+	width:100%;
+	height:auto;
+}
+
+.denim-layout__drawer--log-action-wrapper{
+	margin-top:15px;
+	padding:0px 25px;
+}
+
+.denim-layout__drawer--log-action{
+	border:3px solid #fff;
+	border-radius:3px;
+	background-color:rgba(0,0,0,0.6);
+}
+
+.denim-layout__drawer--log-action-button{
+	display:block;
+	padding:10px;
+	text-align:center;
+	color:#fff !important;
+}
+
+.denim-layout__drawer--log-action-button:focus{
+	background-color:#fff;
+	color:#333 !important;
+}
+
+.denim-layout__drawer--log-action-button:first-child{
+	border-right:1px solid rgba(255,255,255,0.5);
+}
+
+
+
+
+
+
+.denim-layout__drawer--link-icon{
+	display:inline-block;
+	padding:10px;
+	cursor:pointer;
+}
+
+.denim-layout__drawer--link-icon .material-icons{
+	display:block;
+}
+
+
+/* 마스트 헤드 스타일 */
+.denim-layout__masthead--mobile{
+	display:block;
+	position:fixed;
+	top:0;
+	right:0;
+	left:0;
+	
+	z-index: 30000;
+}
+
+.denim-layout__masthead--logo{
+	display:block;
+	margin:0px;
+	font-size:1.25rem;
+	font-weight:bold;
+	text-align:center;
+	
+	height:44px;
+	line-height:44px; 
+}
+
+.denim-layout__masthead--handle{
+	position:absolute;
+	top:0;
+	bottom:0;
+	overflow:hidden;
+}
+
+.denim-layout__masthead--handle-left{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	overflow:hidden;
+}
+
+.denim-layout__masthead--handle-right{
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	overflow:hidden;
+}
+
+.denim-layout__drawer--button{
+	display:inline-block;
+	padding:10px;
+	cursor:pointer;
+}
+
+.denim-layout__drawer--button .material-icons{
+	display:block;
+}
+
+
+
+
+/* footer 스타일 */
+#denim-layout__footer--global{
+	margin:15px 0px;
+}
+
+.denim-layout__footer--navigation-wrapper{
+	padding:15px 0px;
+}
+
+.denim-layout__footer--global-navigation-wrapper{
+	margin-bottom:15px;
+	padding:15px 0px;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	position:relative;
+}
+
+
+
+.denim-layout__footer--global-navigation:after, .denim-layout__footer--global-navigation:before,
+.denim-layout__footer--global-navigation ul:after, .denim-layout__footer--global-navigation ul:before{
+	display:table;
+	content:'';
+}
+
+.denim-layout__footer--global-navigation:after,
+.denim-layout__footer--global-navigation ul:after{
+	clear:both;
+}
+
+.denim-layout__footer--global-navigation{
+	position:relative;
+}
+
+.denim-layout__footer--global-navigation ul{
+	text-align:center;
+}
+
+.denim-layout__footer--global-navigation li{
+	
+	font-size:0.755rem;
+	padding:0px 8px !important;
+	line-height:1;
+	
+	display:inline-block;
+}
+
+.denim-layout__footer--global-navigation li:first-child{
+	
+}
+
+.denim-layout__footer--global-navigation li a{
+	padding-bottom:1px;
+	color:#999;
+}
+
+.denim-layout__global--footer-navigtion__company{
+	
+}
+
+.denim-layout__global--footer-navigtion__help ul{
+}
+
+
+.denim-layout__footer--global-copyright{
+	text-align:center;
+}
+
+.denim-layout__footer--global-copyright span{
+	font-size:0.755rem;
+	color:#555;
+}
+
+
+/* footer custom */
+
+
+.denim-layout__footer--navigation-wrapper__news:before{
+	box-sizing: content-box;
+    content: '';
+    display: block;
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #333;
+    height: 1px;
+    margin: 15px 0;
+    background-color: #fff;
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+h4.denim-layout__footer--navigation-item-title{
+	margin: 0px;
+    font-size: 0.725rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: Arial Black;
+}
+
+
+.denim-layout__footer--navigation-title-wrapper{
+	margin-bottom:9px;
+}
+
+.denim-layout__footer--navigation-title a,
+.denim-layout__footer--navigation-title img{
+	display:block;
+}
+
+.denim-layout__footer--navigation-title img{
+	width:100%;
+	height:auto;
+}
+
+.denim-layout__footer--navigation-title__logo{
+	width:120px;
+}
+
+
+/* mdl mega footer custom */
+.mdl-mega-footer.denim-layout__mega-footer {
+	padding: 0px;
+	color: rgb(158,158,158);
+	background-color: transparent;
+}
+
+.denim-layout__mega-footer .mdl-mega-footer--heading, .denim-layout__mega-footer .mdl-mega-footer__heading {
+    position: relative;
+    width: 100%;
+    padding-right: 39.8px;
+    
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    margin:0px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    font-size: 0.725rem;
+    
+    
+    line-height: 23.8px;
+    
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #333;
+    
+    text-transform: uppercase;
+    
+    font-family: Arial Black;
+}
+
+
+
+
+
+.denim-layout__mega-footer__subscribe .mdl-mega-footer__drop-down-section{
+	width:100%;
+}
+
+.denim-layout__mega-footer .mdl-mega-footer__link-list{
+	color: #333;
+}
+
+
+
+
+/* Ad 스타일 */
+.denim-layout__ad{
+	background-color:#eee;
+	text-align:center;
+	min-height: 100px;
+	
+	margin:15px 0px;
+}
+
+
+/* divider */
+.denim-layout__divider--padding{
+	padding-top:10px;
+}
+
+
+
+/* Article 스타일 */
+.denim-layout__article--title{
+	margin:0px;
+	font-size:1.15rem;
+	font-weight:bold;
+	margin:0px;
+	margin-bottom:5px;
+}
+
+.denim-layout__article--title.denim-layout__article--title-has-margin{
+	margin-top:10px;
+}
+
+.denim-layout__article--thumbnail{
+	position:relative;
+}
+
+.denim-layout__article--thumbnail a,
+.denim-layout__article--thumbnail img{
+	display:block;
+}
+
+.denim-layout__article--thumbnail img{
+	width:100%;
+	height:auto;
+	margin:0px;
+}
+
+.denim-layout__article--summary{
+	font-size:1rem;
+}
+
+.denim-layout__article--summary a{
+	text-decoration: none;
+}
+
+
+
+
+
+
+/* 이 테마에만 적용되는 커스텀 스타일 */
+.denim-layout__masthead--mobile{
+	background-color:#fff;
+	border-bottom:1px solid #0088CC;
+}
+
+.denim-layout__article--top-feature .denim-layout__article--title{
+	margin-top:15px;
+}
+
+.denim-layout__divider--mobile{
+	padding-top:10px;
+	border-top:1px solid #333;
+}
+
+
+/* Custom Article Style */
+.denim-layout__article--thumbnail{
+	border:1px solid #DEDEDE;
+	margin-bottom:10px;
+	cursor:pointer;
+	
+	-webkit-transition-property: border-color;
+	transition-property: border-color;
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s;
+	-webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+	transition-timing-function: cubic-bezier(.4,0,.2,1);
+	
+	
+}
+
+.denim-layout__article--thumbnail:hover{
+	border-color: #0088CC;
+	
+}
+
+#denim-news__left--division__middle--left .denim-layout__article--summary{
+	padding-left:10px;
+	font-size:0.925rem;
+	line-height:1.2;
+}
+
+.denim-layout__article{
+	padding-bottom:15px;
+	margin-bottom:15px;
+	border-bottom:1px solid #B1CBEA;
+}
+
+.denim-layout__article:last-child{
+	border-bottom:0px;
+}
+
+.denim-layout__article--categories{
+	font-size:0.825rem;
+	color:#888;
+	margin-bottom:8px;
+}
+
+.denim-layout__article--title{
+	font-weight:bold;
+}
+
+
+
+
+
+/* single page 스타일 */
+.single .denim-layout__content--wrapper img{
+	max-width:100%;
+	margin:0px auto;
+	height:auto;
+}
+
+.single .wp-caption{
+	max-width:100% !important;
+	margin:10px auto;
+}
+
+.denim-layout__article--single-featured-image img{
+	width:100%;
+}
+
+.denim-layout__article--single-headline{
+	margin-bottom:10px;
+}
+
+.denim-layout__article--single .denim-layout__article--title{
+	font-size:1.5rem;
+	line-height:1.3;
+	margin-top:10px;
+}
+
+.denim-layout__article--subtitle{
+	font-size:1rem;
+	line-height:1.3;
+	color:#777;
+	margin:0px !important;
+	margin-bottom:10px;
+}
+
+.denim-layout__article--single p{
+	padding:0px 10px;
+}
+
+.denim-layout__article--single p a{
+	color: #24566F !important;
+    padding-bottom: 1px;
+    border-bottom: 1px dotted #24566F;
+}
+
+.denim-layout__article--single .wp-caption-text{
+	color:#777;
+	font-size:0.825rem;
+	line-height:1.3;
+	padding-top:5px;
+	margin:0px;
+}
+
+
+
+
+
+/* 숏코드 스타일 */
+.denim-layout__shortcode--wrapper{
+	margin:10px 0px;
+}
+
+
+
+
+/* 숏코드에서 사용되는 스타일 - 숏코드 전용으로 옮겨갈수도 있다 */
+
+.wp-resource--wrapper{
+	display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin: .25rem auto;
+    min-width: 230px;
+    max-width: 600px;
+    /* padding: .8125rem .95rem .75rem; */
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    /* border-radius: 6px; */
+    color: #3d3c40;
+}
+
+.wp-resource--link{
+	position: relative;
+    display: block;
+    /* margin: -.8125rem -.95rem -.75rem; */
+    /* min-height: 38px; */
+    /* padding: .8125rem .95rem .75rem 58px; */
+    /* line-height: 1.4667; */
+    text-decoration: none;
+}
+
+.wp-resource--link:after, .wp-resource--link:before{
+	display:table;
+	content:'';
+}
+
+.wp-resource--link:after{
+	clear:both;
+}
+
+
+.wp-resource--thumbnail-wrapper{
+	float:left;
+	width:30%;
+	
+	background-color:#f00;
+}
+
+.wp-resource--metadata-wrapper{
+	float:left;
+	width:70%;
+}
+
+.wp-resource--metadata{
+	padding:10px;
+}
+
+
+.wp-resource--title{
+	margin: 0 0 2px;
+    font-size: 1rem;
+    line-height: 1.2375;
+    font-weight: 700;
+    text-overflow: ellipsis!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2!important;
+    -webkit-box-orient: vertical!important;
+    overflow: hidden!important;
+    white-space: inherit;
+}
+
+.wp-resource--description{
+	margin: 0 !important;
+    font-size: .8125rem;
+    color: #9e9ea6;
+    padding:0px !important;
+}
+
+.wp-resource--icon{
+	display: block;
+    position: absolute;
+    top: .9375rem;
+    left: .95rem;
+    margin: -2px -9px;
+    width: 31px;
+    line-height: 38px;
+    
+    height: 38px;
+}
+
+
+/* 숏코드에서 사용되는 스타일 - 숏코드 전용으로 옮겨갈수도 있다 - 끝 */
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 479px){
+	/* MDL 모바일 사이즈 */
+	
+	.denim-layout__mega-footer .mdl-mega-footer__heading{
+		border-top:1px solid #E1F0FF;
+	}
+	
+	.denim-layout__mega-footer .mdl-mega-footer__heading.mdl-mega-footer__heading--no-border{
+		border-top:0px solid #E1F0FF;
+	}
+	
+	.denim-layout__mega-footer .mdl-mega-footer__link-list{
+		padding:0px 0px 15px 0px;
+	}
+	
+	.denim-layout__mega-footer .mdl-mega-footer--heading:after, .denim-layout__mega-footer .mdl-mega-footer__heading:after {
+	    padding:5px 0px;
+	}
+	
+	.denim-layout__mega-footer .mdl-mega-footer--heading-checkbox, .denim-layout__mega-footer .mdl-mega-footer__heading-checkbox {
+	    top: 0;
+	    bottom: 0;
+	    height: 100%;
+	    width: 100%;
+	    
+	    padding: 0px;
+	    margin: 0px;
+	}
+	
+	.denim-layout__mega-footer .mdl-mega-footer__link-list{
+		padding-left:10px;
+		color: #333;
+	}
+	
+	
+	
+}
+@media (max-width: 839px) and (min-width: 480px){
+	/* MDL 태블릿 사이즈 */
+	
+	.denim-layout__divider--mobile{
+		padding-top:0px;
+		border-top:0px;
+	}
+	
+	#denim-news__left--division__middle--left{
+		border-right:1px solid #eee;
+	}
+	
+	/* footer */
+	#denim-layout__footer--global{
+		margin:15px 0px 50px 0px;
+	}
+	
+	
+	/* footer custom */
+	.denim-layout__footer--navigation-wrapper__news:before{
+		margin-bottom:9px;
+	}
+	
+}
+@media (min-width: 840px){
+	/* MDL 데스크탑 사이즈 */
+	
+	
+	/* footer */
+	#denim-layout__footer--global{
+		margin:15px 0px 50px 0px;
+	}
+	
+	.denim-layout__footer--global-navigation li{
+		float:left;
+		border-left:1px solid #999;
+		display:block;
+	}
+	
+	.denim-layout__footer--global-navigation li:first-child{
+		border-left:none;
+	}
+	
+	.denim-layout__global--footer-navigtion__help ul{
+		position:absolute;
+		top:0;
+		right:0;
+	}
+	
+	
+	/* footer custom */
+	.denim-layout__footer--navigation-wrapper__news{
+		margin-bottom:30px;
+	}
+	
+	.denim-layout__footer--navigation-wrapper__news:before{
+		margin-bottom:5px;
+	}
+	
+	.denim-layout__footer--navigation-title-wrapper{
+		margin-bottom:35px;
+	}
+	
+	
+	
+	
+	/* mdl mega footer custom */
+	.mdl-mega-footer.denim-layout__mega-footer__subscribe{
+		border-left:1px solid #ccc;
+		padding-left:20px;
+	}
+	
+	.denim-layout__mega-footer .mdl-mega-footer--heading, .denim-layout__mega-footer .mdl-mega-footer__heading {
+		padding-top:0px;
+		line-height: 1;
+		margin-bottom:5px;
+	}
+	
+	
+	
+	
+	/* 이 테마에만 적용되는 커스텀 스타일 */
+	.denim-layout__divider--mobile{
+		padding-top:0px;
+		border-top:0px;
+	}
+	
+	.denim-layout__article--top-feature .denim-layout__article--title{
+		margin-top:0px;
+	}
+	
+	
+	/* 데스크탑 메뉴 바 */
+	.denim-layout__header .denim-layout__division{
+		padding:3px 0px;
+		border-bottom:1px solid #0088CC;
+		/* margin-bottom:15px; */
+	}
+	
+	.denim-layout__header--menu{
+		position:relative;
+		margin-bottom:15px;
+	}
+	
+	.denim-layout__header--menu-wrapper:after, .denim-layout__header--menu-wrapper:before{
+		content: '';
+		display: table;
+	}
+	
+	.denim-layout__header--menu-wrapper:after{
+		clear:both;
+	}
+	
+	.denim-layout__header--action-wrapper:after, .denim-layout__header--action-wrapper:before{
+		content: '';
+		display: table;
+	}
+	
+	.denim-layout__header--action-wrapper:after{
+		clear:both;
+	}
+	
+	.denim-layout__header--menu-wrapper li{
+		float:left;
+	}
+	
+	.denim-layout__header--action-wrapper{
+		position:absolute;
+		top:0;
+		right:0;
+	}
+	
+	.denim-layout__header--action-wrapper li{
+		float:left;
+	}
+	
+	.denim-layout__header--menu-item{
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	.denim-layout__header--menu-item a{
+		padding-bottom:1px;
+		border-bottom:1px solid transparent;
+		
+		-webkit-transition-property: border-color;
+		transition-property: border-color;
+		-webkit-transition-duration: .3s;
+		transition-duration: .3s;
+		-webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+		transition-timing-function: cubic-bezier(.4,0,.2,1);
+	}
+	
+	.denim-layout__header--menu-item a:hover{
+		color:#0088CC;
+		border-color:#0088CC;
+		border-bottom-style: dotted;
+	}
+	
+	.no-underline .denim-layout__header--menu-item a:hover{
+		color:inherit;
+		border-color:transparent;
+	}
+	
+	
+	
+	/* 뉴스 사이트 프론트 페이지 */
+	#denim-news__left--division{
+		padding-right:14px;
+		border-right:1px solid #eee;
+	}
+	
+	#denim-news__right--division{
+		padding-left:15px;
+	}
+	
+	#denim-news__left--division__middle--left{
+		padding-right:14px;
+		border-right:1px solid #eee;
+	}
+	
+	#denim-news__left--division__middle--right{
+		padding-left:15px;
+	}
+	
+	#denim-news__left--division__middle--left .denim-layout__article--summary{
+		padding-left:10px;
+		font-size:1rem;
+		line-height:inherit;
+	}
+	
+	/* 싱글페이지 */
+	.denim-layout__article--single p{
+		padding:0px;
+	}
+	
+}
+
+/* 모바일 (가로 480px 미만) 용 스타일 */
+@media only screen and (min-width: 480px) {
+	/* 480px 이상 */
+}
+@media only screen and (min-width: 600px) {
+	/* 600px 이상 */
+	
+}
+@media only screen and (min-width: 768px) {
+	/* 768px 이상 */
+	.denim-layout__article--single p{
+		max-width:992px;
+		margin:15px auto;
+	}
+	
+	.denim-layout__shortcode--wrapper{
+		max-width:992px;
+		margin:15px auto;
+	}
+}
+@media only screen and (min-width: 992px) {
+	/* 992px 이상 */
+
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382px 이상 */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* iPhone4+ 레티나 디스플레이 */
 }
