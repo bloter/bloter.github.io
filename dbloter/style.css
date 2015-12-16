@@ -27,6 +27,10 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 	color:#000;
 }
 
+.denim-theme a.colored-link{
+	color:#0088CC;
+}
+
 .denim-theme ul{
 	margin:0px;
 	padding:0px;
